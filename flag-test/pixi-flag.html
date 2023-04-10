@@ -22,7 +22,7 @@
 <!--<div id="flag"></div>-->
 <script src="https://pixijs.download/release/pixi.js"></script>
 <script>
-    const app = new PIXI.Application({ width:500, height:500,background: '#1099bb' });
+    const app = new PIXI.Application({ width:1000, height:1000,background: '#1099bb' });
     document.body.appendChild(app.view);
 
     PIXI.Assets.load('./img/ink_bubble.png').then((texture) => {
@@ -30,6 +30,8 @@
 
         plane.x = 100;
         plane.y = 100;
+        plane.height = 500;
+        plane.width = 500;
 
 
         app.stage.addChild(plane);
